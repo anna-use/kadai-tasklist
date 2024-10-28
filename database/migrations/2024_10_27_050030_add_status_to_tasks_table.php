@@ -11,10 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('tasks', function (Blueprint $table) {
-            $table->id();
-            $table->string('content');    // contentカラム追加
-            $table->timestamps();
+        Schema::table('tasks', function (Blueprint $table) {
+            $table->string('status',10); 
         });
     }
 
@@ -23,6 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('tasks');
+        Schema::table('tasks', function (Blueprint $table) {
+            $table->dropColumn('status');
+        });
     }
 };
