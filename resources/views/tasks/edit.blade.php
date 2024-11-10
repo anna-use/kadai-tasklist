@@ -3,7 +3,7 @@
 @section('content')
 
     <div class="prose ml-4">
-        <h2 class="text-lg">id: {{ $task->id }} メッセージ編集ページ</h2>
+        <h2 class="text-lg">id: {{ $task->id }} task編集ページ</h2>
     </div>
 
     <div class="flex justify-center">
@@ -20,7 +20,7 @@
 
                 <div class="form-control my-4">
                     <label for="content" class="label">
-                        <span class="label-text">メッセージ:</span>
+                        <span class="label-text">タスク:</span>
                     </label>
                     <input type="text" name="content" value="{{ $task->content }}" class="input input-bordered w-full">
                 </div>
